@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Bem-vindo ao Cronos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styless.css">
+    <style>
+        /* Estilos específicos para animação de fundo estilo Apple */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            opacity: 0.5;
+            animation: float 20s infinite alternate;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 50px); }
+        }
+    </style>
+</head>
+<body class="h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    
+    <div class="absolute inset-0 z-0 bg-black">
+        <div class="orb w-[400px] h-[400px] bg-purple-600/20 top-[-10%] left-[-10%]"></div>
+        <div class="orb w-[500px] h-[500px] bg-blue-600/10 bottom-[-10%] right-[-10%]" style="animation-delay: -5s;"></div>
+    </div>
+
+    <div class="z-10 w-full max-w-md text-center">
+        <div class="mb-16 animate-fade-in">
+            <h1 class="text-6xl font-extrabold mb-4 text-white tracking-tighter">
+                CRONOS
+            </h1>
+            <div class="h-[2px] w-24 bg-gradient-to-r from-purple-500 to-orange-500 mx-auto rounded-full mb-6"></div>
+            <p class="text-gray-400 font-medium tracking-[0.2em] text-[10px] uppercase">
+                Sua operação no tempo certo.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <a href="login-colaborador.html" class="apple-glass block p-6 text-left transition-all active:scale-[0.97] hover:bg-white/5">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 shadow-inner">
+                            <i class="fas fa-user-astronaut text-xl text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-white/90">Sou Colaborador</h3>
+                            <p class="text-[11px] text-gray-500 font-medium">Visualizar minha escala</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-700 text-xs"></i>
+                </div>
+            </a>
+
+            <a href="login-admin.html" class="apple-glass block p-6 text-left transition-all active:scale-[0.97] hover:bg-white/5">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 shadow-inner">
+                            <i class="fas fa-shield-alt text-xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-white/90">Área Admin</h3>
+                            <p class="text-[11px] text-gray-500 font-medium">Gestão e aprovações</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-700 text-xs"></i>
+                </div>
+            </a>
+        </div>
+
+        <footer class="mt-20">
+            <p class="text-[9px] text-gray-600 font-bold uppercase tracking-[0.3em]">
+                © 2025 Cronos System v2.0
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
